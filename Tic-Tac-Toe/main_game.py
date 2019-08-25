@@ -23,6 +23,7 @@ while True:
         my_turn = player2
 
     print(f'Congratulation {my_turn}!!! You have the chance to choose first.')
+    #assign markers to both the players
     if my_turn == player1:
         player1_marker, player2_marker = player_input(my_turn)
     else:
@@ -31,6 +32,7 @@ while True:
 
     while game:
         if my_turn == player1:
+
             display_board(the_board)
             position = player_choice(player1, the_board)
             place_marker(the_board, player1_marker, position)
