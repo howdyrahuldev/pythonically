@@ -1,3 +1,5 @@
 [
-  "test_app.py::test_getCustomerCharge"
+  "test_app.py::test_getCustomerCharge1",
+  "test_app.py::test_getCustomerCharge2",
+  "test_app.py::test_getCustomerCharge3"
 ]
