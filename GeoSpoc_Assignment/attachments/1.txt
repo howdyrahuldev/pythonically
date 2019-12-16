@@ -1,0 +1,6 @@
+IP: 123.123.154.123 , Date: 26/Apr/2000 , Image File: wpaper.gif AND WebSite: www.jafsoft.com
+IP: 123.123.123.123 , Date: 26/Apr/2000 , Image File: NO-IMAGE AND WebSite: search.netscape.com
+IP: 123.123.123.123 , Date: 26/Apr/2000 , Image File: 5star2000.gif AND WebSite: www.jafsoft.com
+IP: 123.123.123.123 , Date: 26/Apr/2000 , Image File: 5star.gif AND WebSite: www.jafsoft.com
+IP: 123.123.123.123 , Date: 26/Apr/2000 , Image File: a2hlogo.jpg AND WebSite: www.jafsoft.com
+IP: 123.123.654.123 , Date: 26/Apr/2000 , Image File: NO-IMAGE AND WebSite: www.jafsoft.com
