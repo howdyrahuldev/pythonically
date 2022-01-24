@@ -1,13 +1,12 @@
-'''
+"""
 This project is about creating a electronic Tic-Tac-Toe game.
 
 1. Defined multiple functions to achieve different pieces of the game.
 2. Handled exception for wrong entries
-3. Binded all the functions by calling those inside a function
-'''
+3. Bind all the functions by calling those inside a function
+"""
 
-
-#importing all the function from features_module module in same location
+# importing all the function from features_module module in same location
 from features_module import *
 
 print('Welcome!!! Let\'s play Tic Tac Toe')
@@ -23,7 +22,7 @@ while True:
         my_turn = player2
 
     print(f'Congratulation {my_turn}!!! You have the chance to choose first.')
-    #assign markers to both the players
+    # assign markers to both the players
     if my_turn == player1:
         player1_marker, player2_marker = player_input(my_turn)
     else:
