@@ -16,32 +16,30 @@ json_data = json.load(open('data.json'))
 
 @json_app.route('/getmeaning', methods=['POST'])
 def get_meaning():
-    local_data = request.get_json() #Fetching the data as dictionary format from the POST request
-    if "word given" in local_data.keys(): #"word given" should be the key in the json payload
-        try:#this block checks if the exact match found or not
+    local_data = request.get_json()  # Fetching the data as dictionary format from the POST request
+    if "word given" in local_data.keys():  # "word given" should be the key in the json payload
+        try:  # this block checks if the exact match found or not
             try:
                 meaning = json_data[local_data["word given"]]
-            except:
+            except KeyError:
                 try:
                     meaning = json_data[local_data["word given"].lower()]
-                except:
+                except KeyError:
                     meaning = json_data[local_data["word given"].capitalize()]
-            return jsonify({"meaning":meaning})
-        except:
+            return jsonify({"meaning": meaning})
+        except KeyError:
 
             matches = OrderedDict()
             matches["##message##"] = ["as your word could not be found, here are some matches:"]
             for match in get_close_matches(local_data["word given"].lower(), json_data.keys()):
                 matches[match] = json_data[match]
-            if len(matches)>1:
+            if len(matches) > 1:
                 print(matches)
                 return jsonify(matches)
             else:
-                return jsonify({"message":"word not found"})
+                return jsonify({"message": "word not found"})
     else:
-        return jsonify({"message":"key passed should be - word given"})
+        return jsonify({"message": "key passed should be - word given"})
+
 
 json_app.run(port=4989)
-
-
-
